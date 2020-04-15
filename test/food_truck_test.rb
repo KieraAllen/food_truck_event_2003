@@ -34,5 +34,13 @@ class FoodTruckTest < Minitest::Test
     assert_equal 30, @food_truck.check_stock(@item1)
   end
 
+  def test_it_can_add_stock_and_check
+    @food_truck.stock(@item1, 30)
+    @food_truck.stock(@item1, 25)
+
+    assert_equal 55, @food_truck.check_stock(@item1)
+  end
+
+
 
 end
