@@ -17,4 +17,8 @@ class FoodTruckTest < Minitest::Test
     assert_equal "Rocky Mountain Pies", @food_truck.name
   end
 
+  def test_it_starts_with_empty_inventory
+    assert_equal ({}), @food_truck.inventory
+  end
+
 end
